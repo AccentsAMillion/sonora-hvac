@@ -1,0 +1,22 @@
+# Sonora HVAC Backend — Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# ── Web Framework ─────────────────────────────────────────────────────────────
+flask>=3.0.0
+flask-cors>=4.0.0
+
+# ── OpenAI (Chat + TTS + Whisper) ────────────────────────────────────────────
+openai>=1.35.0
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# ── Optional: Twilio SMS (graceful fallback if not installed) ─────────────────
+twilio>=8.0.0
+
+# ── Optional: APScheduler for follow-up engine ───────────────────────────────
+APScheduler>=3.10.0
+
+# ── Optional: Production server ───────────────────────────────────────────────
+gunicorn>=21.0.0

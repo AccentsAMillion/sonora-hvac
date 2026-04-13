@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sonora — The AI Voice of Your HVAC Business</title>
+  <meta name="description" content="Sonora is the 24/7 AI that answers every call, books every job, and grows your HVAC business while you sleep.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2300838F'/><text x='16' y='22' text-anchor='middle' fill='white' font-family='Inter,sans-serif' font-weight='800' font-size='18'>S</text></svg>">
+</head>
+<body>
+  <!-- Grid background -->
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav__inner">
+      <a href="./index.html" class="nav__logo" aria-label="Sonora home">
+        <div class="nav__logo-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
+            <path d="M16 4C10 4 6 8 6 12c0 3 2 5.5 5 6.5C9 19.5 8 21 8 23c0 3 3 5 8 5s8-2 8-5c0-2-1-3.5-3-4.5 3-1 5-3.5 5-6.5 0-4-4-8-10-8z" fill="url(#sg)"/>
+            <defs><linearGradient id="sg" x1="6" y1="4" x2="26" y2="28"><stop stop-color="#00E5FF"/><stop offset=".5" stop-color="#00838F"/><stop offset="1" stop-color="#7C4DFF"/></linearGradient></defs>
+          </svg>
+        </div>
+        <span class="nav__logo-text">Sonora</span>
+      </a>
+      <button class="nav__hamburger" aria-label="Toggle menu" onclick="document.querySelector('.nav__links').classList.toggle('active')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" role="list">
+        <li><a href="#problem">The Problem</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="./dashboard.html" class="nav__cta">See Dashboard</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="hero">
+      <div class="hero__content">
+        <div class="hero__badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          AI-Powered Voice Agent
+        </div>
+        <h1 class="hero__title">
+          Meet <span class="iridescent">Sonora</span> —<br>
+          The Voice of Your Business
+        </h1>
+        <p class="hero__subtitle">
+          The 24/7 AI that answers every call, books every job, and grows your HVAC business while you sleep.
+        </p>
+        <div class="hero__actions">
+          <button class="btn btn--primary" onclick="openChat()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            Hear Sonora In Action
+          </button>
+          <a href="./dashboard.html" class="btn btn--secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            See the Dashboard
+          </a>
+        </div>
+      </div>
+      <!-- Floating particle dots -->
+      <div class="hero__particles" aria-hidden="true" id="heroParticles"></div>
+    </section>
+
+    <!-- ==================== PROBLEM ==================== -->
+    <section class="section problem" id="problem">
+      <div class="container">
+        <div class="section__header fade-in">
+          <p class="section__label">The Problem</p>
+          <h2 class="section__title">Your Phone Is Costing You Money</h2>
+        </div>
+        <p class="problem__quote fade-in">
+          "Every <em>missed call</em> is a missed job.<br>
+          Every <em>slow follow-up</em> is a lost customer."
+        </p>
+        <div class="stats-grid">
+          <div class="stat-card fade-in">
+            <div class="stat-card__value stat-card__value--bad" data-count="35">35%</div>
+            <div class="stat-card__label">of calls missed by average HVAC company</div>
+          </div>
+          <div class="stat-card fade-in">
+            <div class="stat-card__value stat-card__value--bad">$4,500–$12,000</div>
+            <div class="stat-card__label">lost revenue per missed install opportunity</div>
+          </div>
+          <div class="stat-card fade-in">
+            <div class="stat-card__value stat-card__value--bad" data-count="20">20%</div>
+            <div class="stat-card__label">conversion rate from manual follow-up</div>
+          </div>
+          <div class="stat-card fade-in">
+            <div class="stat-card__value stat-card__value--good">3×</div>
+            <div class="stat-card__label">higher conversion with Sonora's AI follow-up</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== HOW IT WORKS ==================== -->
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <div class="section__header fade-in">
+          <p class="section__label">The Growth Engine</p>
+          <h2 class="section__title">How Sonora Grows Your Business</h2>
+          <p class="section__desc">Four AI-powered pillars working 24/7 so you don't have to.</p>
+        </div>
+        <div class="pillars-grid">
+          <div class="pillar fade-in">
+            <div class="pillar__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00BCD4" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            </div>
+            <h3 class="pillar__title">Never Miss a Call</h3>
+            <p class="pillar__desc">Sonora answers every call 24/7, qualifies leads in real-time, and books appointments before your competitors even wake up.</p>
+          </div>
+          <div class="pillar fade-in">
+            <div class="pillar__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00BCD4" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3 class="pillar__title">Instant Follow-Up</h3>
+            <p class="pillar__desc">Missed a call? Sonora fires off a personalized SMS within 2 minutes. No lead goes cold. No customer feels ignored.</p>
+          </div>
+          <div class="pillar fade-in">
+            <div class="pillar__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00BCD4" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+            </div>
+            <h3 class="pillar__title">Smart Booking</h3>
+            <p class="pillar__desc">Sonora books directly into your calendar, checks tech availability, and dispatches the right crew for the job. Zero double-books.</p>
+          </div>
+          <div class="pillar fade-in">
+            <div class="pillar__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00BCD4" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3 class="pillar__title">Review Engine</h3>
+            <p class="pillar__desc">After every completed job, Sonora automatically requests Google reviews. Your 4.8★ rating becomes your best marketing tool.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== RESULTS ==================== -->
+    <section class="section" id="results" style="background: linear-gradient(180deg, var(--color-bg) 0%, rgba(0,131,143,0.04) 50%, var(--color-bg) 100%);">
+      <div class="container">
+        <div class="section__header fade-in">
+          <p class="section__label">Proven Results</p>
+          <h2 class="section__title">What HVAC Owners See in 90 Days</h2>
+        </div>
+        <div class="results-grid">
+          <div class="result-card fade-in">
+            <div class="result-card__value">90%</div>
+            <div class="result-card__label">of missed calls recovered</div>
+          </div>
+          <div class="result-card fade-in">
+            <div class="result-card__value">3×</div>
+            <div class="result-card__label">more booked jobs from existing leads</div>
+          </div>
+          <div class="result-card fade-in">
+            <div class="result-card__value">40%</div>
+            <div class="result-card__label">less time on phones for your CSRs</div>
+          </div>
+          <div class="result-card fade-in">
+            <div class="result-card__value">4.8★</div>
+            <div class="result-card__label">average Google rating</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PRICING ==================== -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section__header fade-in">
+          <p class="section__label">Pricing</p>
+          <h2 class="section__title">Choose Your Growth Plan</h2>
+          <p class="section__desc">Every plan includes Sonora's AI voice agent, setup, and ongoing optimization.</p>
+        </div>
+        <div class="pricing-grid">
+          <!-- Core -->
+          <div class="price-card fade-in">
+            <p class="price-card__name">Core Engine</p>
+            <p class="price-card__price">$1,500<span>/mo</span></p>
+            <p class="price-card__desc">AI receptionist + booking + follow-up. Everything you need to stop missing calls.</p>
+            <ul class="price-card__features" role="list">
+              <li>24/7 AI call answering</li>
+              <li>Lead qualification & intake</li>
+              <li>Smart calendar booking</li>
+              <li>Missed call SMS (2-min response)</li>
+              <li>24-hour lead nurture sequences</li>
+              <li>Basic reporting dashboard</li>
+            </ul>
+            <a href="#cta" class="btn btn--secondary price-card__cta">Get Started</a>
+          </div>
+          <!-- Growth (Featured) -->
+          <div class="price-card price-card--featured fade-in">
+            <span class="price-card__badge">Most Popular</span>
+            <p class="price-card__name">Growth Engine</p>
+            <p class="price-card__price">$2,500<span>/mo</span></p>
+            <p class="price-card__desc">Everything in Core + smart dispatch + automated review collection.</p>
+            <ul class="price-card__features" role="list">
+              <li>Everything in Core Engine</li>
+              <li>Intelligent tech dispatch</li>
+              <li>Automated Google review requests</li>
+              <li>Urgency scoring & priority routing</li>
+              <li>Multi-channel follow-up (SMS + email)</li>
+              <li>Weekly performance reports</li>
+              <li>Dedicated success manager</li>
+            </ul>
+            <a href="#cta" class="btn btn--primary price-card__cta">Get Started</a>
+          </div>
+          <!-- Full Modernization -->
+          <div class="price-card fade-in">
+            <p class="price-card__name">Full Modernization</p>
+            <p class="price-card__price">$3,500<span>/mo</span></p>
+            <p class="price-card__desc">The complete AI transformation. Reactivation campaigns, owner dashboard, custom integrations.</p>
+            <ul class="price-card__features" role="list">
+              <li>Everything in Growth Engine</li>
+              <li>Customer reactivation campaigns</li>
+              <li>Owner command center dashboard</li>
+              <li>Custom CRM integrations</li>
+              <li>ServiceTitan / Housecall Pro sync</li>
+              <li>Advanced analytics & forecasting</li>
+              <li>Priority support & custom AI training</li>
+            </ul>
+            <a href="#cta" class="btn btn--secondary price-card__cta">Get Started</a>
+          </div>
+        </div>
+        <p class="pricing__setup fade-in">One-time setup fee: $5,000 – $7,500 depending on integrations required.</p>
+      </div>
+    </section>
+
+    <!-- ==================== FINAL CTA ==================== -->
+    <section class="cta-section" id="cta">
+      <div class="container">
+        <h2 class="cta-section__title fade-in">Ready to Stop Losing Jobs<br>to Voicemail?</h2>
+        <p class="cta-section__desc fade-in">Join the HVAC companies that have already transformed their business with Sonora's AI growth engine.</p>
+        <a href="#" class="btn btn--primary fade-in" style="position:relative;" onclick="event.preventDefault();">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Book a Demo
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">© 2025 Sonora AI. The Voice of Your Business.</p>
+      <ul class="footer__links" role="list">
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Privacy</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Terms</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Support</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="./app.js" defer></script>
+  <script src="./sonora-widget.js" defer></script>
+</body>
+</html>
