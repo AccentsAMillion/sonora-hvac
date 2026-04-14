@@ -21,6 +21,7 @@ Endpoints:
 """
 
 import io
+import os
 import logging
 import traceback
 from datetime import datetime
@@ -64,7 +65,9 @@ app = Flask(__name__)
 app.secret_key = config.SECRET_KEY
 
 # CORS — allow all origins (restrict in production as needed)
-CORS(app, resources={r"/api/*": {"origins": "*"}}, supports_credentials=True)
+allowed_origins = os.getenv("ALLOWED_ORIGINS", "*")
+origins = allowed_origins.split(",") if allowed_origins != "*" else "*"
+CORS(app, resources={r"/api/*": {"origins": origins}}, supports_credentials=True)
 
 # Initialize database on startup
 init_db()
@@ -850,8 +853,9 @@ def internal_error(e):
 # ─────────────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
+    port = int(os.getenv("PORT", 5000))
     app.run(
         host="0.0.0.0",
-        port=5000,
+        port=port,
         debug=config.DEBUG,
     )

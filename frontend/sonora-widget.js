@@ -8,7 +8,7 @@
   // ==========================================
   // CONFIG
   // ==========================================
-  const VOICE_ENDPOINT = 'http://localhost:5000/api/voice';
+  const VOICE_ENDPOINT = (window.SONORA_CONFIG ? window.SONORA_CONFIG.api('voice') : (window.SONORA_CONFIG ? window.SONORA_CONFIG.API_BASE : 'http://localhost:5000') + '/api/voice');
   const SONORA_AVATAR = `<svg width="24" height="24" viewBox="0 0 32 32" fill="none"><path d="M16 4C10 4 6 8 6 12c0 3 2 5.5 5 6.5C9 19.5 8 21 8 23c0 3 3 5 8 5s8-2 8-5c0-2-1-3.5-3-4.5 3-1 5-3.5 5-6.5 0-4-4-8-10-8z" fill="url(#swg)"/><defs><linearGradient id="swg" x1="6" y1="4" x2="26" y2="28"><stop stop-color="#00E5FF"/><stop offset=".5" stop-color="#00838F"/><stop offset="1" stop-color="#7C4DFF"/></linearGradient></defs></svg>`;
 
   // ==========================================
